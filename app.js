@@ -64,7 +64,12 @@ function posterMarkup(kind){
 }
 
 const root=document.documentElement,main=document.querySelector('#top'),langToggle=document.querySelector('#langToggle'),themeToggle=document.querySelector('#themeToggle'),styleToggle=document.querySelector('#styleToggle'),stylePanel=document.querySelector('#stylePanel'),styleCurrent=document.querySelector('#styleCurrent'),styleOptions=[...document.querySelectorAll('.style-option')];
-let lang=localStorage.getItem('zlab-lang')||'zh';let style=localStorage.getItem('zlab-style')||'unrushed';
+let lang=localStorage.getItem('zlab-lang')||'zh';
+let style=localStorage.getItem('zlab-style')||'hermes';
+if(!localStorage.getItem('zlab-hermes-default-v1')){
+ if(style==='unrushed')style='hermes';
+ localStorage.setItem('zlab-hermes-default-v1','1');
+}
 const mail='zavierli888@gmail.com';
 function renderChrome(){const dict=chrome[lang];document.querySelectorAll('[data-i18n]').forEach(el=>{const value=dict[el.dataset.i18n];if(value!==undefined)el.innerHTML=value});document.documentElement.lang=lang==='zh'?'zh-CN':'en';langToggle.textContent=lang==='zh'?'中 / EN':'EN / 中';localStorage.setItem('zlab-lang',lang)}
 function esc(value){return String(value).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]))}
@@ -103,7 +108,7 @@ function hermes(c){
 const renderers={unrushed,origin,skeg,'good-tech':good,unitar,sodium,'snow-fox':snow,market,hermes};
 let observer;
 function observeReveal(){if(observer)observer.disconnect();observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}}),{threshold:.1});document.querySelectorAll('.reveal,.variant-page [data-reveal]').forEach(el=>observer.observe(el))}
-function applyStyle(next,resetScroll=true){style=next in renderers?next:'unrushed';root.dataset.style=style;document.body.className='style-'+style;styleCurrent.textContent=styleNames[style];styleOptions.forEach(option=>option.classList.toggle('is-active',option.dataset.style===style));document.querySelector('.main-nav a[href="#work"]').textContent=style==='hermes'?(lang==='zh'?'项目方向':'Projects'):chrome[lang].navWork;main.innerHTML=renderers[style](pageCopy[styleKey[style]][lang]);main.querySelectorAll('[data-reveal]').forEach(el=>el.classList.add('reveal'));localStorage.setItem('zlab-style',style);observeReveal();bindDynamicEffects();if(resetScroll)window.scrollTo({top:0,behavior:'smooth'})}
+function applyStyle(next,resetScroll=true){style=next in renderers?next:'hermes';root.dataset.style=style;document.body.className='style-'+style;styleCurrent.textContent=styleNames[style];styleOptions.forEach(option=>option.classList.toggle('is-active',option.dataset.style===style));document.querySelector('.main-nav a[href="#work"]').textContent=style==='hermes'?(lang==='zh'?'项目方向':'Projects'):chrome[lang].navWork;main.innerHTML=renderers[style](pageCopy[styleKey[style]][lang]);main.querySelectorAll('[data-reveal]').forEach(el=>el.classList.add('reveal'));localStorage.setItem('zlab-style',style);observeReveal();bindDynamicEffects();if(resetScroll)window.scrollTo({top:0,behavior:'smooth'})}
 function closeStylePanel(){stylePanel.hidden=true;styleToggle.setAttribute('aria-expanded','false')}
 langToggle.addEventListener('click',()=>{lang=lang==='zh'?'en':'zh';renderChrome();applyStyle(style,false)});themeToggle.addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';localStorage.setItem('zlab-theme',root.dataset.theme)});styleToggle.addEventListener('click',()=>{const open=stylePanel.hidden;stylePanel.hidden=!open;styleToggle.setAttribute('aria-expanded',String(open))});styleOptions.forEach(option=>option.addEventListener('click',()=>{applyStyle(option.dataset.style);closeStylePanel()}));document.addEventListener('click',event=>{if(!event.target.closest('.style-picker'))closeStylePanel()});document.addEventListener('keydown',event=>{if(event.key==='Escape')closeStylePanel()});renderChrome();root.dataset.theme=localStorage.getItem('zlab-theme')||'dark';applyStyle(style,false);
 
