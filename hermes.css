@@ -44,8 +44,8 @@ html[data-style=hermes] .site-header :is(a,button):focus-visible,
 .page-hermes .hermes-section-label,.page-hermes .hermes-eyebrow{font:500 11px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase}
 .page-hermes .hermes-section-label{color:var(--h-accent);padding-top:12px}
 
-.hermes-hero{background:var(--h-blue);color:var(--h-ivory);padding:40px var(--h-gutter) 42px;overflow:hidden}
-.hermes-hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(310px,.85fr);align-items:center;gap:10px;min-height:540px}
+.hermes-hero{background:var(--h-blue);color:var(--h-ivory);padding:40px var(--h-gutter) 42px;overflow:hidden;display:flex;flex-direction:column;min-height:calc(100vh - 74px);min-height:calc(100svh - 74px)}
+.hermes-hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(310px,.85fr);align-items:center;gap:10px;min-height:540px;flex-grow:1}
 .hermes-hero-copy{position:relative;z-index:1;padding:40px 0 55px}
 .hermes-eyebrow{display:flex;align-items:center;gap:11px;color:rgba(255,255,255,.82)}
 .hermes-spark{font:25px/1 var(--serif);color:#f3ba60}
@@ -150,7 +150,7 @@ html[lang^=zh] .hermes-contact h2 em{font-style:normal}
   .hermes-studio{gap:7%}
 }
 @media(max-width:640px){
-  .hermes-hero{padding:30px 22px 26px}
+  .hermes-hero{padding:30px 22px 26px;min-height:calc(100vh - 66px);min-height:calc(100svh - 66px)}
   .hermes-hero-grid{display:block;min-height:0}
   .hermes-hero-copy{padding:26px 0 0}
   .hermes-hero h1{font-size:clamp(54px,13vw,76px);margin-top:28px}
