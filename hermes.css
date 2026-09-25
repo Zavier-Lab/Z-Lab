@@ -6,6 +6,8 @@ html[data-style=hermes]{
   --serif:"Newsreader","Songti SC","STSong",Georgia,serif;
   --sans:"DM Sans","Noto Sans SC",system-ui,sans-serif;
   --h-blue:#2142b7;--h-blue-deep:#152e8d;--h-accent:#2142b7;--h-ivory:#f8f7f2;
+  /* Full-width color fields, with a readable inner column on wide screens. */
+  --h-gutter:max(clamp(24px,7.9vw,114px),calc((100vw - 1212px)/2));
 }
 html[data-style=hermes][data-theme=dark]{
   --bg:#0e1936;--surface:#142345;--surface-2:#1a2b51;--text:#f7f7f2;
@@ -13,6 +15,8 @@ html[data-style=hermes][data-theme=dark]{
   --line-strong:rgba(247,247,242,.32);--button:#f8f7f2;--button-text:#152e8d;
   --h-blue:#1d3aa4;--h-blue-deep:#142b83;--h-accent:#b5c4ff;
 }
+html[data-style=hermes] .site-shell{max-width:none;width:100%}
+html[data-style=hermes] .site-header,html[data-style=hermes] .site-footer{padding-inline:var(--h-gutter)}
 html[data-style=hermes] .site-header{background:var(--h-blue);color:var(--h-ivory)}
 html[data-style=hermes] .site-header .brand-meta,
 html[data-style=hermes] .site-header .main-nav,
@@ -36,11 +40,11 @@ html[data-style=hermes] .site-header :is(a,button):focus-visible,
 .page-hermes{background:var(--bg);color:var(--text);font-family:var(--sans)}
 .page-hermes h1,.page-hermes h2,.page-hermes h3{font-family:var(--serif);font-weight:500}
 .page-hermes em{font-weight:400}
-.page-hermes .hermes-section{padding:clamp(80px,10vw,150px) clamp(24px,7.9vw,114px)}
+.page-hermes .hermes-section{padding:clamp(80px,10vw,150px) var(--h-gutter)}
 .page-hermes .hermes-section-label,.page-hermes .hermes-eyebrow{font:500 11px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase}
 .page-hermes .hermes-section-label{color:var(--h-accent);padding-top:12px}
 
-.hermes-hero{background:var(--h-blue);color:var(--h-ivory);padding:40px clamp(24px,7.9vw,114px) 42px;overflow:hidden}
+.hermes-hero{background:var(--h-blue);color:var(--h-ivory);padding:40px var(--h-gutter) 42px;overflow:hidden}
 .hermes-hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(310px,.85fr);align-items:center;gap:10px;min-height:540px}
 .hermes-hero-copy{position:relative;z-index:1;padding:40px 0 55px}
 .hermes-eyebrow{display:flex;align-items:center;gap:11px;color:rgba(255,255,255,.82)}
