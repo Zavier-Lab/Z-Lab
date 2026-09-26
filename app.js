@@ -14,36 +14,46 @@ const styleKey={'z-signal':'z-signal',unrushed:'unrushed',origin:'origin',skeg:'
 
 pageCopy.hermes={
  zh:{
-  kicker:'Z LAB / 大学生 AI 与软件工作室',
-  heroTitle:'从想法<br><em>到可用的一版。</em>',
-  heroText:'网站、AI 工具、课程项目和数据任务。带上手头的材料，我们一起把下一步做出来。',
-  primary:'发来你的想法',secondary:'探索项目方向',heroIndex:'IDEAS / BUILT TO USE',heroOrbit:'FROM IDEA TO VERSION',
+  kicker:'Z LAB / AI、软件与数据服务',
+  heroTitle:'从具体问题<br><em>到可用的结果。</em>',
+  heroText:'为学生与校园团队提供 AI 工具、网站软件和实验数据处理支持。带上已有材料，我们从最需要解决的问题开始。',
+  primary:'发来你的需求',secondary:'查看作品',heroIndex:'IDEAS / BUILT TO USE',heroOrbit:'FROM IDEA TO VERSION',
   briefEyebrow:'开始合作 / 一封邮件',briefTitle:'告诉我们三件事。',
   briefItems:[['01','你的目标','想解决什么问题'],['02','已有材料','资料、链接或半成品'],['03','时间节点','希望何时用上']],briefCta:'写邮件开始',
-  workEyebrow:'PROJECT PATHS',workTitle:'从你现在的位置开始。',workIntro:'每个项目的起点都不同。先看清要解决的问题，再决定第一版做多大。',
-  paths:[['01','一个想法','把想法整理成能展示、能讨论的页面或原型。','IDEA → PROTOTYPE'],['02','一份作业','把资料、数据和表达组织成清楚的交付物。','MATERIAL → OUTPUT'],['03','一个卡点','排查工具、环境或现有项目里阻碍进度的问题。','BLOCKER → NEXT STEP']],
-  servicesEyebrow:'CAPABILITIES',servicesTitle:'需要什么，<br><em>就解决什么。</em>',servicesIntro:'能力围绕具体任务组合，不要求你先选好技术方案。',
-  services:[['AI / TOOLS','AI 工具与流程','配置并用好 GPT、Codex 与其他 AI 工具。'],['WEB / PRODUCT','网站与页面','为项目制作介绍页、界面或可用的第一版。'],['COURSE / MAKING','课程项目','把课程想法做成报告、网页或展示材料。'],['DATA / VISUAL','数据与图表','整理数据，做出清楚、可复查的图表。'],['SETUP / DEBUG','软件与环境','处理安装、配置、部署与排错。'],['AUTOMATION','重复任务自动化','把适合自动化的步骤连接成简单流程。']],
+  workEyebrow:'SELECTED WORK',workTitle:'先看我们做出来的。',workIntro:'先公开我们自己的作品。客户项目会在确认可公开的内容后补充。',
+  caseLabels:['需求','我们做了什么','交付物'],caseStudies:[{kind:'自有作品 / 网站与前端',title:'Z Lab 官网',problem:'需要一个讲清服务，同时能展示前端设计能力的官网。',work:'设计并开发本站，包含中英文内容、深浅色切换与多种视觉风格。',outcome:'你正在浏览的网站与可切换的界面实验。',cta:'查看本站',href:'#top'}],
+  pathsTitle:'你可以从这里开始',paths:[['01','一个想法','先做能展示、能讨论的页面或原型。','IDEA → PROTOTYPE'],['02','一个项目','围绕你自己的目标，提供技术指导、开发或数据处理支持。','PROJECT → DELIVERY'],['03','一个卡点','排查工具、环境或现有项目里阻碍进度的问题。','BLOCKER → NEXT STEP']],
+  servicesEyebrow:'WHAT WE DO',servicesTitle:'三类具体服务。',servicesIntro:'先确认目标和交付物，再选择合适的工具与做法。',
+  services:[['AI / WORKFLOW','AI 工具与自动化','配置 AI 工具、梳理使用流程，制作适合具体任务的 Agent 或自动化脚本。'],['WEB / SOFTWARE','网站与软件','制作项目官网、网页应用或小型软件，并完成部署与交接。'],['DATA / ANALYSIS','实验数据处理','整理、清洗、分析和可视化数据，保留可复查的处理过程。']],
   studioEyebrow:'HOW WE WORK',studioTitle:'一边做，<br><em>一边看清楚。</em>',studioIntro:'把下一步缩小到能交付、能验证的范围。',
   steps:[['01','讲清目标','先确认谁会使用、要解决什么，以及手上已经有什么。'],['02','做出一版','围绕最重要的任务，交付可以查看或使用的结果。'],['03','根据反馈调整','一起检查实际使用中的问题，再决定是否继续扩展。']],
-  faqEyebrow:'BEFORE WE START',faqTitle:'常见的两个问题。',faqs:[['需要准备完整需求吗？','不需要。先发目标、已有材料和时间节点，我们可以一起明确范围。'],['可以从一个小问题开始吗？','可以。工具配置、页面调整、数据处理或项目中的具体卡点，都适合作为起点。']],
-  contactEyebrow:'YOUR NEXT MOVE',contactTitle:'下一版，<br><em>从这里开始。</em>',contactIntro:'写下你要做的事，我们会从目标和可行的第一步聊起。',contactCta:'联系 Z Lab',mailSubject:'Z Lab 项目咨询',mailBody:'你好，Z Lab！\n\n我想完成：\n\n我现在已有：\n\n希望使用的时间：\n'
+  teamEyebrow:'THE TEAM',teamTitle:'四个人，<br><em>各自负责哪一步。</em>',teamIntro:'技术和客户沟通由团队成员直接负责。项目开始前，我们会确认负责对接与交付的人。',
+  teamGroups:[['技术与交付 / 2 人','创始人 Z 与另一位技术负责人','负责需求梳理、技术方案、开发与交付，并参与项目对接。'],['客户与合作 / 2 人','两位市场负责人','负责介绍服务、沟通需求、寻找合作机会，并将项目需求带回团队确认。']],
+  pricingEyebrow:'PRICING',pricingTitle:'先定范围，<br><em>再给报价。</em>',pricingIntro:'现在的项目差异较大，暂不使用统一起步价。咨询后，我们会根据实际工作量给出对应报价。',
+  pricingPoints:[['交付内容','要完成哪些页面、功能、图表或指导。'],['项目条件','已有材料、技术环境与需要解决的问题。'],['时间与费用','使用时间，以及域名、云服务等第三方费用。']],pricingNote:'开工前确认交付范围、时间、修改方式和费用。',
+  faqEyebrow:'BEFORE WE START',faqTitle:'开始前常问的事。',faqs:[['需要准备完整需求吗？','不需要。先发目标、已有材料和时间节点，我们可以一起明确范围。'],['大概多少钱？','请先说明要解决的问题和希望交付的内容。我们确认工作量与第三方费用后报价。'],['可以从一个小问题开始吗？','可以。工具配置、页面调整、数据处理或项目中的具体卡点，都适合作为起点。']],
+  contactEyebrow:'YOUR NEXT MOVE',contactTitle:'下一版，<br><em>从这里开始。</em>',contactIntro:'写下你要做的事、希望使用的时间和预算范围，我们会先讨论可行的第一步。',contactCta:'联系 Z Lab',mailSubject:'Z Lab 项目咨询',mailBody:'你好，Z Lab！\n\n我想解决的问题：\n\n我现在已有的材料：\n\n希望使用的时间：\n\n预算范围：\n'
  },
  en:{
-  kicker:'Z LAB / AI & SOFTWARE FOR STUDENTS',
-  heroTitle:'From idea<br><em>to a working version.</em>',
-  heroText:'Websites, AI tools, coursework and data projects. Bring what you have; we will shape the next useful step together.',
-  primary:'Send your idea',secondary:'Explore project paths',heroIndex:'IDEAS / BUILT TO USE',heroOrbit:'FROM IDEA TO VERSION',
+  kicker:'Z LAB / AI, SOFTWARE & DATA',
+  heroTitle:'From a real problem<br><em>to a useful result.</em>',
+  heroText:'AI tools, websites, software and experimental data support for students and campus teams. Bring what you have; we will start with the problem that matters most.',
+  primary:'Send your brief',secondary:'See our work',heroIndex:'IDEAS / BUILT TO USE',heroOrbit:'FROM IDEA TO VERSION',
   briefEyebrow:'START HERE / ONE EMAIL',briefTitle:'Tell us three things.',
   briefItems:[['01','Your goal','What needs to work'],['02','What you have','Notes, links or a draft'],['03','Your timeline','When you need it']],briefCta:'Write the first email',
-  workEyebrow:'PROJECT PATHS',workTitle:'Start where you are.',workIntro:'Every project starts somewhere different. We clarify the problem first, then decide what a useful first version needs.',
-  paths:[['01','An idea','Turn a thought into a page or prototype people can see and discuss.','IDEA → PROTOTYPE'],['02','An assignment','Shape research, data and explanation into a clear deliverable.','MATERIAL → OUTPUT'],['03','A blocker','Work through a tool, setup or project issue that is slowing you down.','BLOCKER → NEXT STEP']],
-  servicesEyebrow:'CAPABILITIES',servicesTitle:'Solve the task<br><em>in front of you.</em>',servicesIntro:'We combine the skills the task needs. You do not need to choose a technology first.',
-  services:[['AI / TOOLS','AI tools and workflows','Set up and use GPT, Codex and other AI tools well.'],['WEB / PRODUCT','Websites and pages','Build a project page, interface or useful first version.'],['COURSE / MAKING','Course projects','Turn a course idea into a report, website or presentation.'],['DATA / VISUAL','Data and charts','Organize data into clear, checkable visuals.'],['SETUP / DEBUG','Software and setup','Handle installation, configuration, deployment and debugging.'],['AUTOMATION','Task automation','Connect repetitive steps into a simpler workflow.']],
+  workEyebrow:'SELECTED WORK',workTitle:'See what we have made.',workIntro:'We are starting with our own work. Client projects will follow once the public details are agreed.',
+  caseLabels:['The need','What we did','Deliverable'],caseStudies:[{kind:'In-house work / website and front end',title:'Z Lab website',problem:'We needed a website that explains our services and shows our front end design skills.',work:'Designed and built this site with Chinese and English copy, light and dark themes, and multiple visual styles.',outcome:'The website you are browsing and its switchable interface experiments.',cta:'Explore this site',href:'#top'}],
+  pathsTitle:'Three ways to begin',paths:[['01','An idea','Make a page or prototype people can see and discuss.','IDEA → PROTOTYPE'],['02','A project','Get technical guidance, development or data support around your own goal.','PROJECT → DELIVERY'],['03','A blocker','Work through a tool, setup or project issue that is slowing you down.','BLOCKER → NEXT STEP']],
+  servicesEyebrow:'WHAT WE DO',servicesTitle:'Three focused services.',servicesIntro:'We define the goal and deliverable before choosing the tools and approach.',
+  services:[['AI / WORKFLOW','AI tools and automation','Set up AI tools, improve workflows, and build agents or automations for specific tasks.'],['WEB / SOFTWARE','Websites and software','Build project websites, web applications or small tools, then deploy and hand them over.'],['DATA / ANALYSIS','Experimental data','Clean, analyse and visualise data with a reviewable processing workflow.']],
   studioEyebrow:'HOW WE WORK',studioTitle:'Build, check,<br><em>then improve.</em>',studioIntro:'Make the next step small enough to deliver and verify.',
   steps:[['01','Define the goal','Identify who will use it, what they need and what already exists.'],['02','Build a version','Deliver something people can inspect or use around the key task.'],['03','Use feedback','Check what happens in use, then decide whether to expand.']],
-  faqEyebrow:'BEFORE WE START',faqTitle:'Two common questions.',faqs:[['Do I need a complete brief?','No. Send your goal, the materials you already have and your timeline. We can clarify the scope together.'],['Can we start with a small problem?','Yes. Tool setup, page changes, data work or one project blocker are all good starting points.']],
-  contactEyebrow:'YOUR NEXT MOVE',contactTitle:'The next version<br><em>starts here.</em>',contactIntro:'Tell us what you want to make. We will start with the goal and a practical first step.',contactCta:'Contact Z Lab',mailSubject:'Z Lab project inquiry',mailBody:'Hello Z Lab,\n\nI want to make:\n\nI already have:\n\nI need it by:\n'
+  teamEyebrow:'THE TEAM',teamTitle:'Four people,<br><em>clear responsibilities.</em>',teamIntro:'Team members handle both technical work and client conversations directly. We confirm who owns each project before work starts.',
+  teamGroups:[['Technology and delivery / 2 people','Founder Z and another technical lead','Scope the need, choose an approach, build and deliver the work, and stay involved in project conversations.'],['Clients and partnerships / 2 people','Two growth leads','Explain services, discuss needs and partnership opportunities, then bring the brief to the team for confirmation.']],
+  pricingEyebrow:'PRICING',pricingTitle:'Scope first,<br><em>quote second.</em>',pricingIntro:'Projects currently vary too much for one starting price. We quote against the actual work after discussing the brief.',
+  pricingPoints:[['Deliverables','Which pages, features, charts or guidance are needed.'],['Project conditions','Existing materials, technical environment and the problem to solve.'],['Time and costs','Deadline and third party costs such as domains or hosting.']],pricingNote:'We agree on scope, timing, revisions and fees before work begins.',
+  faqEyebrow:'BEFORE WE START',faqTitle:'Before we begin.',faqs:[['Do I need a complete brief?','No. Send your goal, the materials you already have and your timeline. We can clarify the scope together.'],['How much will it cost?','Tell us the problem and expected deliverable. We will quote after checking the work and any third party costs.'],['Can we start with a small problem?','Yes. Tool setup, page changes, data work or one project blocker are all good starting points.']],
+  contactEyebrow:'YOUR NEXT MOVE',contactTitle:'The next version<br><em>starts here.</em>',contactIntro:'Tell us what you need, when you need it and your budget range. We will discuss a practical first step.',contactCta:'Contact Z Lab',mailSubject:'Z Lab project inquiry',mailBody:'Hello Z Lab,\n\nThe problem I want to solve:\n\nThe materials I already have:\n\nWhen I need it:\n\nMy budget range:\n'
  }
 };
 
@@ -98,9 +108,11 @@ function hermes(c){
    <div class="hermes-hero-rule"><span>${c.heroIndex}</span><span>Z LAB © 2026</span></div>
    <div class="hermes-brief"><div class="hermes-brief-heading"><p>${c.briefEyebrow}</p><h2>${c.briefTitle}</h2></div><div class="hermes-brief-items">${c.briefItems.map(x=>`<div><small>${x[0]}</small><strong>${x[1]}</strong><span>${x[2]}</span></div>`).join('')}</div><a href="${emailHref}">${c.briefCta}<span aria-hidden="true">↗</span></a></div>
   </section>
-  <section class="hermes-work hermes-section" id="work"><div class="hermes-section-head"><p class="hermes-section-label">${c.workEyebrow}</p><div><h2>${c.workTitle}</h2><p>${c.workIntro}</p></div></div><div class="hermes-path-grid">${c.paths.map(x=>`<article class="hermes-path-card"><span class="hermes-path-number">${x[0]}</span><div><p>${x[3]}</p><h3>${x[1]}</h3><span>${x[2]}</span></div></article>`).join('')}</div></section>
+  <section class="hermes-work hermes-section" id="work"><div class="hermes-section-head"><p class="hermes-section-label">${c.workEyebrow}</p><div><h2>${c.workTitle}</h2><p>${c.workIntro}</p></div></div><div class="hermes-case-list">${c.caseStudies.map((item,i)=>`<article class="hermes-case"><div class="hermes-case-visual" aria-hidden="true"><div class="hermes-case-browser"><span></span><span></span><span></span><div class="hermes-case-screen"><b>Z</b><i></i><i></i><i></i></div></div><small>Z LAB / ${String(i+1).padStart(2,'0')}</small></div><div class="hermes-case-content"><p class="hermes-case-kind">${item.kind}</p><h3>${item.title}</h3><dl><div><dt>${c.caseLabels[0]}</dt><dd>${item.problem}</dd></div><div><dt>${c.caseLabels[1]}</dt><dd>${item.work}</dd></div><div><dt>${c.caseLabels[2]}</dt><dd>${item.outcome}</dd></div></dl><a href="${item.href}">${item.cta} <span aria-hidden="true">↗</span></a></div></article>`).join('')}</div><h3 class="hermes-path-heading">${c.pathsTitle}</h3><div class="hermes-path-grid">${c.paths.map(x=>`<article class="hermes-path-card"><span class="hermes-path-number">${x[0]}</span><div><p>${x[3]}</p><h3>${x[1]}</h3><span>${x[2]}</span></div></article>`).join('')}</div></section>
   <section class="hermes-services hermes-section" id="services"><div class="hermes-section-head"><p class="hermes-section-label">${c.servicesEyebrow}</p><div><h2>${c.servicesTitle}</h2><p>${c.servicesIntro}</p></div></div><div class="hermes-service-list">${c.services.map((x,i)=>`<div class="hermes-service-row"><span class="hermes-service-number">${String(i+1).padStart(2,'0')}</span><span class="hermes-service-category">${x[0]}</span><h3>${x[1]}</h3><p>${x[2]}</p></div>`).join('')}</div></section>
   <section class="hermes-studio hermes-section" id="studio"><div class="hermes-studio-intro"><p class="hermes-section-label">${c.studioEyebrow}</p><h2>${c.studioTitle}</h2><p>${c.studioIntro}</p><div class="hermes-studio-mark" aria-hidden="true">Z<span>LAB</span></div></div><div class="hermes-step-list">${c.steps.map(x=>`<article><small>${x[0]}</small><div><h3>${x[1]}</h3><p>${x[2]}</p></div></article>`).join('')}</div></section>
+  <section class="hermes-team hermes-section"><div class="hermes-section-head"><p class="hermes-section-label">${c.teamEyebrow}</p><div><h2>${c.teamTitle}</h2><p>${c.teamIntro}</p></div></div><div class="hermes-team-grid">${c.teamGroups.map((x,i)=>`<article><span>0${i+1} / 02</span><h3>${x[0]}</h3><strong>${x[1]}</strong><p>${x[2]}</p></article>`).join('')}</div></section>
+  <section class="hermes-pricing hermes-section"><div class="hermes-section-head"><p class="hermes-section-label">${c.pricingEyebrow}</p><div><h2>${c.pricingTitle}</h2><p>${c.pricingIntro}</p></div></div><div class="hermes-pricing-points">${c.pricingPoints.map((x,i)=>`<article><small>0${i+1}</small><h3>${x[0]}</h3><p>${x[1]}</p></article>`).join('')}</div><p class="hermes-pricing-note">${c.pricingNote}</p></section>
   <section class="hermes-faq hermes-section"><div><p class="hermes-section-label">${c.faqEyebrow}</p><h2>${c.faqTitle}</h2></div><div class="hermes-faq-list">${c.faqs.map(x=>`<details><summary>${x[0]}<span aria-hidden="true">+</span></summary><p>${x[1]}</p></details>`).join('')}</div></section>
   <section class="hermes-contact hermes-section" id="contact"><p class="hermes-section-label">${c.contactEyebrow}</p><h2>${c.contactTitle}</h2><div class="hermes-contact-bottom"><p>${c.contactIntro}</p><a class="hermes-action hermes-action-primary" href="${emailHref}">${c.contactCta}<span aria-hidden="true">↗</span></a></div></section>
  </div>`;
